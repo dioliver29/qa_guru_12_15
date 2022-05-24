@@ -26,12 +26,18 @@ public class WebDriverProvider implements Supplier<WebDriver> {
     private WebDriver createWebDriver() {
         if (config.getBrowser().equals(Browser.CHROME)) {
             WebDriverManager.chromedriver().setup();
+            WebDriverManager.
             return new ChromeDriver();
         }
         if (config.getBrowser().equals(Browser.FIREFOX)) {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         }
+        if (config.getBrowser().equals(Browser.SAFARI)) {
+            WebDriverManager.safaridriver().setup();
+            return new FirefoxDriver();
+        }
+
         throw new RuntimeException("no such driver");
 
     }
