@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BrowserConfig {
 
-    private WebDriver driver = new WebDriverProvider().get();
+    //private WebDriver driver = new WebDriverProvider().get();
 
     @Test
     public void testBrowserSetUp() {
