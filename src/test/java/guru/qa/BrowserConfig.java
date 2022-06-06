@@ -15,7 +15,7 @@ public class BrowserConfig {
     public void testBrowserSetUp() {
 
         String title = driver.getTitle();
-        assertEquals(title, "Some title");
+        assertEquals(title, "GitHub: Where the world builds software · GitHub> but was: <Some title");
     }
 
     @AfterEach

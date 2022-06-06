@@ -1,16 +1,22 @@
 package guru.qa.config;
 
-public class WebDriverConfig {
+import org.aeonbits.owner.Config;
 
-    public Browser getBrowser() {
-        return Browser.CHROME;
-    }
+import java.net.URL;
 
-    public String getBaseUrl() {
-        return "https://github.com";
-    }
-    public String getBrowserVersion() {
-        return "https://github.com";
-    }
+public interface WebDriverConfig extends Config {
+
+    @Key("baseUrl")
+    String getBaseUrl();
+
+    @Key("browser")
+    Browser getBrowser();
+
+    @Key("browserVer")
+    Browser getBrowserVersion();
+
+    @Key("remoteUrl")
+    URL getRemoteUrl();
+
 
 }
